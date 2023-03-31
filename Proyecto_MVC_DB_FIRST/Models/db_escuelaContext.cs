@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -25,11 +26,14 @@ namespace Proyecto_MVC_DB_FIRST.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["db_escuela"].ConnectionString);
+            /*
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("server=192.168.10.89\\TEST04; user=sa; password=}w6)hKWezp-A; database=db_escuela; integrated security=false;");
+            #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                          optionsBuilder.UseSqlServer("server=192.168.10.89\\TEST04; user=sa; password=}w6)hKWezp-A; database=db_escuela; integrated security=false;");
             }
+            */
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

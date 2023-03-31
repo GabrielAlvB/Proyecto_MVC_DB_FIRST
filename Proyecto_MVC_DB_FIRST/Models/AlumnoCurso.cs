@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
@@ -15,5 +16,17 @@ namespace Proyecto_MVC_DB_FIRST.Models
 
         public virtual Alumnos IdAlumnoNavigation { get; set; }
         public virtual Cursos IdCursoNavigation { get; set; }
-    }
+
+
+        /*
+        public class AlumnosDBContext : DbContext
+        {
+            public DbSet<Alumnos> Users { get; set; }
+        }
+        */
+
+   }
+
+
+
 }
