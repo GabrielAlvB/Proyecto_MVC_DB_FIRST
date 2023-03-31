@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Proyecto_MVC_DB_FIRST.Models.AlumnoCurso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdAlumnoNavigation.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCursoNavigation.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdAlumnoNavigation.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdCursoNavigation.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

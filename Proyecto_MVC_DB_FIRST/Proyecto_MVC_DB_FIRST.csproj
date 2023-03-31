@@ -237,7 +237,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlumnoCursoesController.cs" />
+    <Compile Include="Controllers\AlumnosController.cs" />
+    <Compile Include="Controllers\CursosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\AlumnosContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -283,6 +287,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Alumnos\Create.cshtml" />
+    <Content Include="Views\Alumnos\Delete.cshtml" />
+    <Content Include="Views\Alumnos\Details.cshtml" />
+    <Content Include="Views\Alumnos\Edit.cshtml" />
+    <Content Include="Views\Alumnos\Index.cshtml" />
+    <Content Include="Views\AlumnoCursoes\Create.cshtml" />
+    <Content Include="Views\AlumnoCursoes\Delete.cshtml" />
+    <Content Include="Views\AlumnoCursoes\Details.cshtml" />
+    <Content Include="Views\AlumnoCursoes\Edit.cshtml" />
+    <Content Include="Views\AlumnoCursoes\Index.cshtml" />
+    <Content Include="Views\Cursos\Create.cshtml" />
+    <Content Include="Views\Cursos\Delete.cshtml" />
+    <Content Include="Views\Cursos\Details.cshtml" />
+    <Content Include="Views\Cursos\Edit.cshtml" />
+    <Content Include="Views\Cursos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

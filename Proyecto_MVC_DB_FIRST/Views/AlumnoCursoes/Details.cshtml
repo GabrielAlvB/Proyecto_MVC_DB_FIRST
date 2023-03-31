@@ -1,0 +1,34 @@
+﻿@model Proyecto_MVC_DB_FIRST.Models.AlumnoCurso
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AlumnoCurso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAlumnoNavigation.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAlumnoNavigation.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCursoNavigation.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdCursoNavigation.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
