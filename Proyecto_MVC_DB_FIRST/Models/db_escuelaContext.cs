@@ -26,7 +26,7 @@ namespace Proyecto_MVC_DB_FIRST.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["db_escuela"].ConnectionString);
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["conexion"].ConnectionString);
             /*
             if (!optionsBuilder.IsConfigured)
             {
